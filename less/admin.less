@@ -1,0 +1,375 @@
+.MenuControl {
+  width: 100%;
+  align-self: stretch;
+}
+
+.MenuControl-frame {
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  left: -10000px;
+  top: 0;
+  border: 0;
+  visibility: hidden;
+}
+
+.MenuControl-scanning {
+  color: var(--muted-color);
+  font-size: 13px;
+  margin: 6px 0;
+}
+
+.MenuControl-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 640px) 240px;
+  gap: 30px;
+  align-items: start;
+  margin-top: 10px;
+}
+
+.MenuControl-list {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.MenuControl-item {
+  background: var(--body-bg);
+  border: 1px solid var(--control-bg);
+  border-radius: var(--border-radius);
+  margin-bottom: 6px;
+
+  &.is-open {
+    border-color: var(--muted-more-color);
+  }
+
+  &.is-hidden .MenuControl-icon,
+  &.is-hidden .MenuControl-name,
+  &.is-missing .MenuControl-name {
+    opacity: 0.5;
+  }
+
+  &.is-hidden .MenuControl-name {
+    text-decoration: line-through;
+  }
+}
+
+.MenuControl-item--ghost {
+  opacity: 0.4;
+  background: var(--control-bg);
+}
+
+.MenuControl-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 4px 4px 0;
+  min-height: 40px;
+}
+
+.MenuControl-handle {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  padding: 0 10px;
+  color: var(--muted-color);
+  cursor: grab;
+  touch-action: none;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: -2px;
+    border-radius: var(--border-radius);
+  }
+}
+
+.MenuControl-icon {
+  width: 20px;
+  text-align: center;
+  color: var(--muted-color);
+  flex-shrink: 0;
+}
+
+.MenuControl-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.MenuControl-original {
+  font-weight: normal;
+  color: var(--muted-color);
+  font-size: 12px;
+}
+
+.MenuControl-badges {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.MenuControl-badge {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  background: var(--control-bg);
+  color: var(--control-color);
+  white-space: nowrap;
+
+  &--muted {
+    color: var(--muted-color);
+  }
+
+  &--warning {
+    background: var(--alert-bg);
+    color: var(--alert-color);
+  }
+}
+
+.MenuControl-toggle {
+  flex-shrink: 0;
+  color: var(--muted-color);
+
+  // Core's .Button.active paints a disc; the colour alone says "on".
+  &.Button.active,
+  &.Button.active:hover {
+    background: none;
+    box-shadow: none;
+    color: var(--menu-control-highlight, #f5a623);
+  }
+}
+
+.MenuControl-details {
+  padding: 12px 14px 14px 40px;
+  border-top: 1px solid var(--control-bg);
+}
+
+.MenuControl-field {
+  margin-bottom: 14px;
+
+  > label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  .FormControl {
+    max-width: 420px;
+  }
+}
+
+.MenuControl-iconInput {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.MenuControl-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-top: 6px;
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+.MenuControl-pickerToggle {
+  flex-shrink: 0;
+}
+
+.MenuControl-picker {
+  margin-top: 8px;
+  max-width: 420px;
+  border: 1px solid var(--control-bg);
+  border-radius: var(--border-radius);
+  background: var(--body-bg);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  padding: 10px;
+}
+
+.MenuControl-pickerBar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+
+  .FormControl {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.MenuControl-pickerStyles {
+  display: flex;
+  flex-shrink: 0;
+
+  .Button {
+    padding: 8px 10px;
+  }
+}
+
+.MenuControl-pickerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
+  gap: 4px;
+  max-height: 232px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.MenuControl-pickerIcon {
+  height: 38px;
+  border: 0;
+  border-radius: var(--border-radius);
+  background: none;
+  color: var(--text-color);
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background: var(--control-bg);
+  }
+
+  &.active {
+    background: var(--primary-color);
+    color: var(--body-bg);
+  }
+}
+
+.MenuControl-pickerFoot {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted-color);
+}
+
+.MenuControl-preview {
+  position: sticky;
+  top: 70px;
+  padding: 14px;
+  border: 1px solid var(--control-bg);
+  border-radius: var(--border-radius);
+  background: var(--body-bg);
+}
+
+.MenuControl-previewHead {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.MenuControl-previewTitle {
+  font-weight: bold;
+}
+
+.MenuControl-previewViewer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--muted-color);
+
+  .Select,
+  .Select-input {
+    width: 100%;
+  }
+}
+
+.MenuControl-previewStart {
+  background: var(--primary-color);
+  color: var(--body-bg);
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.MenuControl-previewList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+.MenuControl-previewItem,
+.MenuControl-previewTag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  color: var(--muted-color);
+  border-radius: var(--border-radius);
+}
+
+.MenuControl-previewItem.is-highlight {
+  --menu-control-color: var(--menu-control-highlight, var(--primary-color));
+  color: var(--menu-control-color);
+  font-weight: bold;
+  background: color-mix(in srgb, var(--menu-control-color) 14%, transparent);
+}
+
+.MenuControl-previewIcon {
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.MenuControl-previewSwatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin: 0 2px;
+  flex-shrink: 0;
+}
+
+.MenuControl-previewSeparator {
+  border-top: 1px solid var(--control-bg);
+  margin: 8px 0;
+}
+
+.MenuControl-previewNote {
+  font-size: 12px;
+  color: var(--muted-color);
+  margin-bottom: 10px;
+}
+
+.MenuControl-previewEmpty {
+  font-size: 12px;
+  color: var(--muted-color);
+}
+
+@media @tablet, @phone {
+  .MenuControl-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  // Under the list on narrow screens, where it can no longer sit beside it.
+  .MenuControl-preview {
+    position: static;
+  }
+}
+
+@media @phone {
+  .MenuControl-badges {
+    display: none;
+  }
+
+  .MenuControl-details {
+    padding-left: 14px;
+  }
+}
