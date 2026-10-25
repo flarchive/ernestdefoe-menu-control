@@ -2,22 +2,13 @@
 
 > **Read-only archive of released versions of ernestdefoe/menu-control.** Not for installation: use [Packagist](https://packagist.org/packages/ernestdefoe/menu-control) or the [upstream repository](https://github.com/ernestdefoe/menu-control).
 
-**10** versions archived · Latest: [`v1.2.2`](https://github.com/flarchive/ernestdefoe-menu-control/tree/archive/v1.2.2) · License: `MIT` · Flarum: `^2.0`
+**0** versions archived · Latest: [`v1.2.3`](https://github.com/flarchive/ernestdefoe-menu-control/tree/archive/v1.2.3) · License: `MIT` · Flarum: `^2.0`
 
 ## Archived Versions
 
 | Version | Released | Flarum | Source |
 |---|---|---|---|
-| `v1.0.0` | 2026-10-13 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-menu-control/tree/archive/v1.0.0) |
-| `v1.0.1` | 2026-10-13 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-menu-control/tree/archive/v1.0.1) |
-| `v1.0.2` | 2026-10-14 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-menu-control/tree/archive/v1.0.2) |
-| `v1.1.0` | 2026-10-14 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-menu-control/tree/archive/v1.1.0) |
-| `v1.1.1` | 2026-10-14 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-menu-control/tree/archive/v1.1.1) |
-| `v1.1.2` | 2026-10-20 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-menu-control/tree/archive/v1.1.2) |
-| `v1.1.3` | 2026-10-20 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-menu-control/tree/archive/v1.1.3) |
-| `v1.2.0` | 2026-10-22 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-menu-control/tree/archive/v1.2.0) |
-| `v1.2.1` | 2026-10-22 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-menu-control/tree/archive/v1.2.1) |
-| `v1.2.2` | 2026-10-22 | `^2.0` | [Browse](https://github.com/flarchive/ernestdefoe-menu-control/tree/archive/v1.2.2) |
+| — | — | — | — |
 
 Catalog entry: [packages/ernestdefoe-menu-control.json](https://github.com/flarchive/archive-index/blob/main/packages/ernestdefoe-menu-control.json)
 
